@@ -5,4 +5,4 @@ RUN git clone https://github.com/Invidia19/adsis.git /myapps/
 RUN cp -r /myapps/ /var/www/html/
 
 
-EXPOSE 80
+EXPOSE 8080
