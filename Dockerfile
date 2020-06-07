@@ -7,6 +7,4 @@ RUN apt install php libapache2-mod-php -y
 RUN cp -r /myapp/ /var/www/html/
 
 
-
-
-
+EXPOSE 80
