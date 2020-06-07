@@ -1,4 +1,4 @@
-FROM httpd:2.4
+FROM php:7.1-apache
 
 RUN apt-get update && apt-get install -y git
 RUN git clone https://github.com/Invidia19/adsis.git /myapp/
