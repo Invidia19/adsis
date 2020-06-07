@@ -1,9 +1,10 @@
-FROM php:7.1-fpm-alpine3.4
+FROM httpd:2.4
 
-RUN apk update && apk upgrade && \
-    apk add --no-cache bash git openssh
+RUN apt-get update && apt-get install -y git
 RUN git clone https://github.com/Invidia19/adsis.git /myapp/
-
+RUN apt-get install php-mysql -y
+RUN apt install php libapache2-mod-php -y
+RUN cp -r myapp/ /var/www/html/
 
 
 
