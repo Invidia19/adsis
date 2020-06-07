@@ -2,7 +2,10 @@ FROM php:7.1-apache
 
 RUN apt-get update && apt-get install -y git
 RUN git clone https://github.com/Invidia19/adsis.git /myapps/
-RUN cp -r /myapps/ /var/www/html/
+RUN chmod 755 /myapps/start-apache
+COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY /myapps/ /var/www/
+RUN chown -R www-data:www-data /var/www
 
 
-EXPOSE 8080
+EXPOSE 80
