@@ -8,6 +8,7 @@ RUN cp -R /usr/local/apache2/htdocs/httpd.conf /usr/local/apache2/conf/httpd.con
 RUN apt install mariadb-server -y
 RUN apt-get install php-mysql -y
 RUN apt install php libapache2-mod-php -y
+RUN service mysqld start
 RUN mysql -u root
 RUN create database website2;
 RUN exit
