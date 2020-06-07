@@ -3,8 +3,7 @@ os: linux
 files:
   - source: /index.php
     destination: /var/www/html/
-  - source: /happiness.png
-    destination: /var/www/html/
+    
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies

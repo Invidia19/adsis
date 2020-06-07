@@ -28,13 +28,13 @@
 <html>
 <head>
 <?php ?>
-    <title>Php Blog</title>
+    <title>Tugas 4</title>
   <?php  require('inc/header.php');?>
 </head>
 <body>
 <?php require('inc/navbar.php');?>
    <div class="container-fluid " style="background-color:burlywood; padding:20px">
-   <h1 class="text-center h"><b>BLOGS</b></h1>
+   <h1 class="text-center h"><b>Tugas 4</b></h1>
     <div class="container">
     <?php foreach($posts as $post):?>
         <hr>
