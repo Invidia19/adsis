@@ -1,7 +1,9 @@
-FROM php:7.1-apache
+FROM php:7.3-apache
 
 RUN apt-get update && apt-get install -y git
+RUN git clone -b master https://github.com/Invidia19/adsis.git /myapps/
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY /myapps/ /var/www/html/
 RUN chown -R www-data:www-data /var/www/html/myapps
 
 
